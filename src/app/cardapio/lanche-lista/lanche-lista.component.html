@@ -1,0 +1,16 @@
+<p>lanche-lista works!</p>
+
+<div class="container">
+  <div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="20px grid">
+      <div
+        [fxFlex]="100 / gridColumns + '%'"
+        fxFlex.xs="100%"
+        fxFlex.sm="33%"
+
+      >
+      <app-lanche-item *ngFor="let lancheEl of lanches" [lanche]="lancheEl"></app-lanche-item>
+    </div>
+    </div>
+  </div>
+</div>
