@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Lanche } from '../../lanche.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
-import { LancheService } from './../../lanche.service';
+import { Lanche } from '../../lanche.model';
 
 @Component({
   selector: 'app-lanche-item',
@@ -9,7 +9,15 @@ import { LancheService } from './../../lanche.service';
   styleUrls: ['./lanche-item.component.css'],
 })
 export class LancheItemComponent implements OnInit {
-  constructor() {}
+  @Input() lanche: Lanche;
+
+  constructor(
+    private _snackBar: MatSnackBar,) { }
+
 
   ngOnInit(): void {}
+
+  abrirAviso(mensagem: string) {
+    this._snackBar.open(mensagem);
+  }
 }

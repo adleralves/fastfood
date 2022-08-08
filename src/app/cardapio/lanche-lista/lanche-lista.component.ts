@@ -9,16 +9,21 @@ import { LancheService } from '../lanche.service';
   styleUrls: ['./lanche-lista.component.css'],
 })
 export class LancheListaComponent implements OnInit {
-  // lanches: Lanche[];
+  lanches: Lanche[] = [];
   gridColumns = 3;
 
-  constructor() {}
+  constructor(private lancheService: LancheService) {
+    this.lanches = this.lancheService.getLanches();
+  }
 
   ngOnInit(): void {
-    // this.lanches = this.lancheService.getLanches();
   }
 
   toggleGridColumns() {
     this.gridColumns = this.gridColumns === 3 ? 4 : 3;
   }
 }
+
+// [fxFlex]="100 / gridColumns + '%'"
+// fxFlex.xs="100%"
+// fxFlex.sm="33%"

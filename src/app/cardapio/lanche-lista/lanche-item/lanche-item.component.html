@@ -1,23 +1,25 @@
 <mat-card class="mat-elevation-z4">
-  <img
-    style="max-width: 400px"
-    mat-card-image
-    src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=999&q=80"
+  <img style="max-width: 400px" mat-card-image alt="nome" [src]="lanche.imagemURL"
   />
   <mat-card-content>
-    <mat-card-title>Burger</mat-card-title><span class="example-spacer"></span>
-    <mat-icon class="star_color">star</mat-icon
-    ><mat-icon class="star_color">star</mat-icon
-    ><mat-icon class="star_color">star</mat-icon>
+    <mat-card-title> {{ lanche.nome }} </mat-card-title>
+    <span class="example-spacer"></span>
+    <mat-icon class="star_color">star</mat-icon>
+    <mat-icon class="star_color">star</mat-icon>
+    <mat-icon class="star_color">star</mat-icon>
+    <mat-icon class="star_color">star</mat-icon>
+    <mat-icon class="star_color">star</mat-icon>
   </mat-card-content>
-  <mat-card-content>Lanche com carne e tudo que tem em um lanche</mat-card-content>
+  <mat-card-content>{{ lanche.descricao }}</mat-card-content>
   <mat-card-actions align="end">
     <button mat-icon-button disabled class="accent">
-      <mat-icon>attach_money</mat-icon>27.90
+      <mat-icon>attach_money</mat-icon>{{ lanche.valor }}
     </button>
     <span class="flex-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon ml-auto">
+    <button mat-icon-button (click)="abrirAviso('Lanche adicionado ao carrinho!')" class="example-icon favorite-icon ml-auto">
       <mat-icon class="shop_color">add_shopping_cart</mat-icon>
     </button>
   </mat-card-actions>
 </mat-card>
+<span class="example-spacer"></span>
+

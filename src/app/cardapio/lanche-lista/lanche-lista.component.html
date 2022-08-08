@@ -1,14 +1,13 @@
 <div class="container">
   <div class="content">
-    <div fxLayout="row wrap" fxLayoutGap="20px grid">
-      <div
-        [fxFlex]="100 / gridColumns + '%'"
-        fxFlex.xs="100%"
-        fxFlex.sm="33%"
-        *ngFor="let num of [1, 2, 3, 4, 5, 6]"
-      >
-        <app-lanche-item></app-lanche-item>
+      <div fxLayout="row wrap" fxLayoutGap="5px grid">
+        <app-lanche-item
+          class="lista"
+          [fxFlex]="100 / 3"
+          *ngFor="let lanche of lanches"
+          [lanche]="lanche"
+        ></app-lanche-item>
       </div>
-    </div>
   </div>
 </div>
+<!--fxLayout="row wrap" fxLayoutGap="20px grid"-->

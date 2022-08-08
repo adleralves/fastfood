@@ -1,10 +1,5 @@
 .example-card {
-  max-width: 300px;
-}
-
-.example-header-image {
-  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
-  background-size: cover;
+  max-width: 400px;
 }
 
 mat-toolbar {
@@ -46,4 +41,8 @@ button{
 
 .shop_color {
   color: green;
+}
+
+.mat-elevation-z4 {
+max-width: 400px;
 }

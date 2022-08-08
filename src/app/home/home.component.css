@@ -1,0 +1,11 @@
+.example-spacer {
+  flex: 2 2 auto;
+}
+
+.flex-spacer {
+  width: 100%;
+}
+
+.content {
+  max-width: 500px;
+}
