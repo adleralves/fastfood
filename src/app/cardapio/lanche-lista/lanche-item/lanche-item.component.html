@@ -1,5 +1,9 @@
 <mat-card class="mat-elevation-z4">
-  <img style="max-width: 400px" mat-card-image alt="nome" [src]="lanche.imagemURL"
+  <img
+    style="max-width: 400px"
+    mat-card-image
+    alt="nome"
+    src="https://images.unsplash.com/photo-1605789538467-f715d58e03f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
   />
   <mat-card-content>
     <mat-card-title> {{ lanche.nome }} </mat-card-title>
@@ -8,18 +12,21 @@
     <mat-icon class="star_color">star</mat-icon>
     <mat-icon class="star_color">star</mat-icon>
     <mat-icon class="star_color">star</mat-icon>
-    <mat-icon class="star_color">star</mat-icon>
+    <mat-icon class="star_color">star_half</mat-icon>
   </mat-card-content>
   <mat-card-content>{{ lanche.descricao }}</mat-card-content>
   <mat-card-actions align="end">
     <button mat-icon-button disabled class="accent">
-      <mat-icon>attach_money</mat-icon>{{ lanche.valor }}
+      <mat-icon>attach_money</mat-icon>{{ lanche.valorUnit }}
     </button>
     <span class="flex-spacer"></span>
-    <button mat-icon-button (click)="abrirAviso('Lanche adicionado ao carrinho!')" class="example-icon favorite-icon ml-auto">
+    <button
+      mat-icon-button
+      (click)="abrirAviso('Lanche adicionado ao carrinho!')"
+      class="example-icon favorite-icon ml-auto"
+    >
       <mat-icon class="shop_color">add_shopping_cart</mat-icon>
     </button>
   </mat-card-actions>
 </mat-card>
 <span class="example-spacer"></span>
-

@@ -1,0 +1,21 @@
+.card {
+  margin-bottom: 10px;
+}
+
+.example-spacer {
+  flex: 2 2 auto;
+}
+
+.flex-spacer {
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
