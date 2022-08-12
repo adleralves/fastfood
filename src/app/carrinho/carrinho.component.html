@@ -1,5 +1,17 @@
+<br>
+<h1 class="text-center">Carrinho</h1>
+<br>
 <div class="container">
   <div class="content">
+    <mat-card class="card">
+      <mat-card-title-group>
+        <span class="example-spacer"></span>
+        <span class="example-spacer"></span>
+        <mat-card-content>Nome</mat-card-content>
+        <span class="example-spacer"></span>
+        <mat-card-content>Valor</mat-card-content>
+      </mat-card-title-group>
+    </mat-card>
     <app-carrinho-item *ngFor="let carrinho of carrinhos"
     [carrinho]="carrinho"
     ></app-carrinho-item>
@@ -9,10 +21,10 @@
   <div class="content">
     <div class="teste">
       <span class="example-spacer"></span>
-      <div class="teste">
+      <!--<div class="teste">
         <button mat-button disabled class="accent"> TOTAL: R$ 26.90
         </button>
-      </div>
+      </div>-->
       <div class="teste">
         <button mat-raised-button class="botao">
           <mat-icon>payments</mat-icon> PAGAR

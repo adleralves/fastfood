@@ -8,6 +8,7 @@ import { Carrinho } from '../carrinho.model';
 })
 export class CarrinhoItemComponent implements OnInit {
   @Input() carrinho: Carrinho;
+  carrinhos: Carrinho[] = [];
 
   constructor() { }
 

@@ -11,6 +11,7 @@ import { Lanche } from '../../lanche.model';
 })
 export class LancheItemComponent implements OnInit {
   @Input() lanche: Lanche;
+  numero: number;
 
   constructor(
     private _snackBar: MatSnackBar,
@@ -25,5 +26,7 @@ export class LancheItemComponent implements OnInit {
 
   addLanche() {
     this.lancheService.addCarrinho(this.lanche);
+    this.numero = this.lanche.id;
   }
+
 }

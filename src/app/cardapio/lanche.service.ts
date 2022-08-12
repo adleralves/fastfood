@@ -13,7 +13,7 @@ export class LancheService {
       1,
       'Burger One',
       'Muitas carnes, com pão, queijo, salada e tudo que tem geralmente em um lanche.',
-      'https://i.imgur.com/6GMYwUV.jpg',
+      'https://i.imgur.com/oM19pvM.jpg',
       27.90
     ),
     new Lanche(
@@ -27,7 +27,7 @@ export class LancheService {
       3,
       'Burger Three',
       'Muitas carnes, com pão, queijo, salada e tudo que tem geralmente em um lanche.',
-      'https://i.imgur.com/Fu6SP4j.jpg',
+      'https://i.imgur.com/lihWnuW.jpg',
       29.50,
     ),
     new Lanche(
@@ -41,14 +41,14 @@ export class LancheService {
       5,
       'Burger Five',
       'Muitas carnes, com pão, queijo, salada e tudo que tem geralmente em um lanche.',
-      'https://i.imgur.com/oM19pvM.jpg',
+      'https://i.imgur.com/6GMYwUV.jpg',
       32.50
     ),
     new Lanche(
       6,
       'Burger Six',
       'Muitas carnes, com pão, queijo, salada e tudo que tem geralmente em um lanche.',
-      'https://i.imgur.com/lihWnuW.jpg',
+      'https://i.imgur.com/Fu6SP4j.jpg',
       29.50,
     )
   ];
