@@ -1,4 +1,3 @@
-import { LancheService } from './cardapio/lanche.service';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
@@ -8,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,12 +17,15 @@ import { AppComponent } from './app.component';
 import { CardapioComponent } from './cardapio/cardapio.component';
 import { LancheItemComponent } from './cardapio/lanche-lista/lanche-item/lanche-item.component';
 import { LancheListaComponent } from './cardapio/lanche-lista/lanche-lista.component';
+import { LancheService } from './cardapio/lanche.service';
 import { CarrinhoItemComponent } from './carrinho/carrinho-item/carrinho-item.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { CarrinhoService } from './carrinho/carrinho.service';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { PedidoService } from './pedidos/pedido.service';
 import { PedidosComponent } from './pedidos/pedidos.component';
-import { CarrinhoService } from './carrinho/carrinho.service';
+import { CdkColumnDef } from '@angular/cdk/table';
 
 @NgModule({
   declarations: [
@@ -48,11 +51,14 @@ import { CarrinhoService } from './carrinho/carrinho.service';
     MatSnackBarModule,
     MatFormFieldModule,
     MatInputModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatTableModule
   ],
   providers: [
-    [LancheService],
-    [CarrinhoService],
+    [LancheService,
+    CarrinhoService,
+    PedidoService,
+    CdkColumnDef],
     {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500}}
   ],
   bootstrap: [AppComponent],
