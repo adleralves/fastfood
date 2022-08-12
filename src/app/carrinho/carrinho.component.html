@@ -1,5 +1,23 @@
 <div class="container">
   <div class="content">
-    <app-carrinho-item></app-carrinho-item>
+    <app-carrinho-item *ngFor="let carrinho of carrinhos"
+    [carrinho]="carrinho"
+    ></app-carrinho-item>
+  </div>
+</div>
+<div class="container">
+  <div class="content">
+    <div class="teste">
+      <span class="example-spacer"></span>
+      <div class="teste">
+        <button mat-button disabled class="accent"> TOTAL: R$ 26.90
+        </button>
+      </div>
+      <div class="teste">
+        <button mat-raised-button class="botao">
+          <mat-icon>payments</mat-icon> PAGAR
+        </button>
+      </div>
+    </div>
   </div>
 </div>

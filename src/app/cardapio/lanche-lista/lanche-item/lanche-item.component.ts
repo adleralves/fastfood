@@ -1,3 +1,4 @@
+import { LancheService } from './../../lanche.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -12,12 +13,17 @@ export class LancheItemComponent implements OnInit {
   @Input() lanche: Lanche;
 
   constructor(
-    private _snackBar: MatSnackBar,) { }
+    private _snackBar: MatSnackBar,
+    private lancheService: LancheService) { }
 
 
   ngOnInit(): void {}
 
   abrirAviso(mensagem: string) {
     this._snackBar.open(mensagem);
+  }
+
+  addLanche() {
+    this.lancheService.addCarrinho(this.lanche);
   }
 }
