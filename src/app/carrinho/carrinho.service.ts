@@ -7,7 +7,7 @@ export class CarrinhoService {
 
   recebeLanche(lanche: Lanche) {
     let teste = false;
-    this.carrinho = new Carrinho(1, lanche, 1, lanche.valorUnit, '');
+    this.carrinho = new Carrinho(1, lanche, 1, lanche.valorUnitario, '');
     const existeNoCarrinho = this.carrinhos.find((itemCarrinho) => itemCarrinho.lanche.id === this.carrinho.lanche.id);
     if (!existeNoCarrinho) {
       this.carrinhos.push(this.carrinho);

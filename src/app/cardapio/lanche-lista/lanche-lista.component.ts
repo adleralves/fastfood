@@ -13,7 +13,7 @@ export class LancheListaComponent implements OnInit {
   gridColumns = 3;
 
   constructor(private lancheService: LancheService) {
-    this.lanches = this.lancheService.getLanches();
+    this.lancheService.getLanches().subscribe(lanches => this.lanches = lanches);
   }
 
   ngOnInit(): void {

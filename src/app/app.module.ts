@@ -26,6 +26,7 @@ import { HomeComponent } from './home/home.component';
 import { PedidoService } from './pedidos/pedido.service';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { CdkColumnDef } from '@angular/cdk/table';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { CdkColumnDef } from '@angular/cdk/table';
     MatFormFieldModule,
     MatInputModule,
     MatProgressBarModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
   providers: [
     [LancheService,
