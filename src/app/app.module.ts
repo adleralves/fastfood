@@ -27,6 +27,7 @@ import { PedidoService } from './pedidos/pedido.service';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { CdkColumnDef } from '@angular/cdk/table';
 import { HttpClientModule } from '@angular/common/http';
+import { ClienteComponent } from './carrinho/cliente/cliente.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     LancheItemComponent,
     CarrinhoItemComponent,
     PedidosComponent,
+    ClienteComponent,
   ],
   imports: [
     BrowserModule,

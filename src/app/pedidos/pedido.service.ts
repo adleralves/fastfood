@@ -1,29 +1,21 @@
+import { Cliente } from './../carrinho/cliente/cliente.model';
+import { CarrinhoService } from './../carrinho/carrinho.service';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Pedido } from './pedido.model';
 
 @Injectable()
 export class PedidoService {
 
-  pedidos: Pedido[] = [
-    new Pedido(
-      1,
-      'adler',
-      'pronto'
-    ),
-    new Pedido(
-      2,
-      'jamily',
-      'preparando'
-    ),
-    new Pedido(
-      3,
-      'bruno',
-      'nem fiz'
-    )
-  ];
+  constructor(private httpClient: HttpClient,
+    private carrinhoService: CarrinhoService) { }
+
+    addCliente(cliente: Cliente) {
+
+    }
 
     getPedidos() {
-      return this.pedidos.slice();
+    //  return this.pedidos.slice();
     }
 }
 
