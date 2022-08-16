@@ -1,12 +1,13 @@
 export class Pedido {
-  public id: number;
-  public cliente: string;
-  public obs: string;
+  public cliente: any;
+  public carrinho: any;
+  public status: number;
+  public dataHoraPedido: string;
+  public dataHoraEntrega: string;
 
-  constructor(id: number, cliente: string, obs: string) {
-    this.id = id;
+  constructor(cliente: any, carrinho: any) {
     this.cliente = cliente;
-    this.obs = obs;
+    this.carrinho = carrinho;
   }
 
 }

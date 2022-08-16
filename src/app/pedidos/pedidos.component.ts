@@ -1,3 +1,5 @@
+import { CarrinhoService } from './../carrinho/carrinho.service';
+import { Carrinho } from './../carrinho/carrinho.model';
 import { Pedido } from './pedido.model';
 import { Component, OnInit } from '@angular/core';
 import { PedidoService } from './pedido.service';
@@ -8,12 +10,13 @@ import { PedidoService } from './pedido.service';
   styleUrls: ['./pedidos.component.css']
 })
 export class PedidosComponent implements OnInit {
-  pedidos: Pedido[] = [];
-  dataSource: Pedido;
+  pedidos: Pedido;
+  carrinho: Carrinho[];
 
-  displayedColumns: string[] = ['id', 'cliente', 'obs'];
-  constructor(private pedidoService: PedidoService) {
-    this.pedidos = this.pedidoService.getPedidos();
+  constructor(private pedidoService: PedidoService,
+    private carrinhoService: CarrinhoService) {
+    this.pedidos = this.pedidoService.getPedido();
+    this.carrinho = this.carrinhoService.getCarrinho();
     console.log(this.pedidos);
   }
 
